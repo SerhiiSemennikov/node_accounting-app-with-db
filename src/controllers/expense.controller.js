@@ -68,7 +68,7 @@ const update = async (req, res) => {
     return res.sendStatus(404);
   }
 
-  if (typeof title !== 'string') {
+  if (typeof title !== 'string' || !isNaN(amount)) {
     return res.sendStatus(400);
   }
 

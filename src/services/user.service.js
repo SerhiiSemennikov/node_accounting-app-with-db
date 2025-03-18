@@ -42,7 +42,7 @@ const remove = async (id) => {
 };
 
 const update = async ({ id, name }) => {
-  const user = getById(id);
+  const user = await getById(id);
 
   if (user) {
     try {

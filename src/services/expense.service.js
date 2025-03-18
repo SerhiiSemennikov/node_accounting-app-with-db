@@ -53,7 +53,7 @@ const create = async (userId, spentAt, title, amount, category, note) => {
 };
 
 const update = async (id, title, amount, category, note) => {
-  const expense = getById(id);
+  const expense = await getById(id);
 
   if (expense) {
     try {
